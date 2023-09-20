@@ -7,23 +7,40 @@ function setup() {
   myParagraph.mouseClicked(makeRed);
   button = createButton('click me')
   button.position(0,0)
+  button.mousePressed(makeBlue);
+  slider = createSlider(0,255,100)
+  slider.position(10,200)
+
 }
 
 function draw() {
 myParagraph.position(mouseX, mouseY)
+
+const fontSize = slider.value()
+myParagraph.style("font-size", )
 }
 
 function makeRed() {
   myParagraph.style("color", "red");
 }
 
+function makeBlue() {
+   myParagraph.style("color", "blue");
+ }
+
+ const image = document.getElementById(catImage)
+ 
+
 
 /*
 
 Some Questions:
 0. What is this percent sign all about? (hint: it's "modulus")
+         It finds the remainder when framecount is divided by 200 
 1. Where, in the p5 reference, do we find all this DOM stuff?
+         It is under the "create____" functions
 2. Why is the text so large when it's just a "paragraph"?
+         The font size in style is XXLarge
 3. "color" and "red"? Where did those come from and where 
    could you find more style attributes that could be
    changed?
